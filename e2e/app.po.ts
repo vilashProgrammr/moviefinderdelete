@@ -1,4 +1,4 @@
-import { browser, by, element } from 'protractor';
+import { browser, by, element, promise } from 'protractor';
 
 export class AppPage {
   navigateTo() {
@@ -31,7 +31,7 @@ export class AppPage {
 
   getMovieinfo_enterKeyword()
   {
-  		return element(by.xpath('//input[contains(@class,"mat-input-element")]')).sendKeys("dil");
+  		return element(by.xpath('//input[contains(@class,"mat-input-element")]')).sendKeys("dil cha");
   }
 
   selectMoviefromList()
@@ -39,7 +39,7 @@ export class AppPage {
   	return element(by.xpath('//div[@id="mat-autocomplete-0"]')).click();
   }
 
-  clickonMovieviewDetails()
+  clickonMovieviewDetails(): promise.Promise<void> 
   {
   	return element(by.xpath('//div[@class="caption"]//following::a//following::a')).click();
 

@@ -8,12 +8,12 @@ describe('github-user-search App', () => {
     page = new AppPage();
   });
 
-  it('should display movie finder screen', () => {
+  it('TestCase 1|should display movie finder screen|5', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Movies Finder');
   });
 
-  it('should except search keywords',()=>{
+  it('TestCase 2|should except search keywords|5',()=>{
   		
    		page.getSearchkeyword1();
    		browser.sleep(2000);
@@ -35,8 +35,7 @@ describe('github-user-search App', () => {
 
    		browser.switchTo().activeElement();
 
-   		expect(page.getMovie1Title()).toEqual('Title: Dilwale Dulhania Le Jayenge');
-
+   		expect(page.getMovie1Title()).toEqual('Title: Dil Chahta Hai').then()
    		
    		page.getMovie1Releasedat();
    		page.clickOnclose();
