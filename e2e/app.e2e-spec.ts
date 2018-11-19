@@ -29,7 +29,7 @@ describe('github-user-search App', () => {
         page.getMovieinfo_enterKeyword();
         browser.sleep(2000);
     
-           expect(page.getMatElement()).toBeTruthy();
+           expect(page.getMatElement().isPresent()).toBeTruthy();
     
 
 
