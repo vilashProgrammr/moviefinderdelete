@@ -59,7 +59,9 @@ export class AppPage {
     return element(by.xpath('//span[@class="mat-button-wrapper"]')).click();
   }
 
-
+  getMatElement(){
+    return element(by.xpath('//div[@id="mat-autocomplete-0"]'));
+  }
 //-------------------------------------
 
 getMovieinfo2_enterKeyword()
@@ -71,4 +73,4 @@ getMovieinfo2_enterKeyword()
   {
   		return element(by.xpath('//input[contains(@class,"mat-input-element")]')).sendKeys("ab");
   }
-  }
+}
