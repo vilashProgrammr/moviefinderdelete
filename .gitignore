@@ -14,6 +14,7 @@ package.json
 .project
 .classpath
 .c9/
+.theia/
 *.launch
 .settings/
 *.sublime-workspace
